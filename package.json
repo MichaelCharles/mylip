@@ -1,0 +1,25 @@
+{
+  "name": "mylip",
+  "version": "0.1.0",
+  "description": "A simple cli tool for getting your IPv4 address on your local network.",
+  "main": "index.js",
+  "bin": {
+    "my-local-ip": "my-local-ip.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcaubrey/mylip.git"
+  },
+  "keywords": [
+    "cli",
+    "local",
+    "ip"
+  ],
+  "author": "Michael Charles Aubrey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcaubrey/mylip/issues"
+  },
+  "homepage": "https://github.com/mcaubrey/mylip#readme",
+  "dependencies": {}
+}
