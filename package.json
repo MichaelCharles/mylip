@@ -1,10 +1,10 @@
 {
   "name": "mylip",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple cli tool for getting your IPv4 address on your local network.",
   "main": "index.js",
   "bin": {
-    "my-local-ip": "my-local-ip.js"
+    "mylip": "my-local-ip.js"
   },
   "repository": {
     "type": "git",
