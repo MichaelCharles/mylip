@@ -27,26 +27,39 @@ module.exports = () => {
         callback(null, cached);
         return;
       }
-      
+
       exec(command, (error, stdout, sterr) => {
         cached = [];
         let ip;
         let matches = stdout.match(filterRE) || [];
-        
+
         for (let i = 0; i < matches.length; i++) {
           ip = matches[i].replace(filterRE, '$1')
           if (!ignoreRE.test(ip)) {
             cached.push(ip);
           }
         }
-        
+
         callback(error, cached);
       });
     };
   })();
 
-  getNetworkIPs(function (error, ipAddresses) {
-    ipAddresses.forEach(ip => console.log(ip))
+  getNetworkIPs((error, ipAddresses) => {
+    const flag = process.argv.pop();
+
+    switch (flag) {
+      case "-m":
+        console.log(ipAddresses);
+        break;
+      case "-r":
+        process.stdout.write(ipAddresses[0]);
+        break;
+      default:
+        console.log(ipAddresses[0]);
+    }
+
+
     if (error) {
       console.log('error:', error);
     }

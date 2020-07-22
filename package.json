@@ -1,6 +1,6 @@
 {
   "name": "mylip",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple cli tool for getting your IPv4 address on your local network.",
   "main": "index.js",
   "bin": {
